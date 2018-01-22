@@ -1,0 +1,59 @@
+<!--
+  Generated template for the PlacePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary" text-center>
+
+    <ion-title>
+        <button ion-button icon-left clear (click)="onDismiss()">
+            <ion-icon name="arrow-back"></ion-icon>{{place.title | uppercase}}
+        </button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img [src]="place.imagePath" >
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-wrap text-center>
+        <p>{{place.description}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+          <agm-map [latitude]="place.location.lat" [longitude]="place.location.lng" [zoom]=16 [gestureHandling]="none" [mapDraggable]="false" [clickableIcons]="false">
+              <agm-marker [latitude]="place.location.lat" [longitude]="place.location.lng"></agm-marker>
+            </agm-map>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <button ion-button icon-left block outline color="secondary" (click)="onEdit()">
+            <ion-icon name="create"></ion-icon>Edit
+        </button>
+        <button ion-button icon-left block outline (click)="onRemove()">
+            <ion-icon name="remove-circle"></ion-icon>
+            Remove
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <button ion-button block icon-left (click)="onDismiss()">
+            <ion-icon name="close"></ion-icon>
+          Dismiss
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

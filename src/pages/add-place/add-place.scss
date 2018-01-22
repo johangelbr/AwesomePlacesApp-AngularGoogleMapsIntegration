@@ -1,0 +1,22 @@
+page-add-place {
+  agm-map{
+    height: 250px;
+  }
+
+}
+.failedToast{
+  div{
+    text-align:center !important;
+    background-color: #eb0029 !important;
+    border-bottom-left-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+  }
+}
+.successToast{
+  div{
+    text-align:center !important;
+    background-color: #212121 !important;
+  }
+}
+
+
