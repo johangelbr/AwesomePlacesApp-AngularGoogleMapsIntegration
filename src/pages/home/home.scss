@@ -1,3 +1,42 @@
 page-home {
+  .card-background-page {
 
+    ion-card {
+      position: relative;
+      text-align: center;
+      height: 30%;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+}
+.failedToast{
+  div{
+    text-align:center !important;
+    background-color: #eb0029 !important;
+    border-bottom-left-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+  }
+}
+.successToast{
+  div{
+    text-align:center !important;
+    background-color: #212121 !important;
+  }
 }

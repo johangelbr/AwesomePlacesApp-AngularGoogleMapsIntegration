@@ -11,6 +11,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content padding class="card-background-page" >
+  <ion-card *ngFor="let place of places" (click)="onOpenPlace(place)" text-wrap>
+    <img [src]="place.imagePath" >
+        <div class="card-title">
+        {{ place.title }}
+        </div>
+        <div class="card-subtitle">{{place.description}}</div>
+  </ion-card>
 </ion-content>
